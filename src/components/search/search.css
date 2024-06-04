@@ -1,0 +1,29 @@
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+input {
+    padding: 12px;
+    border: 2px solid #c6c5c5c5;
+    color: rgba(0,0,0,0.9);
+    font-size: 18px;
+    line-height: 24px;
+    border-radius: 12px;
+    width: 300px;
+    padding-left: 35px;
+    color: black;
+
+    margin-bottom: 20px;
+}
+
+.input-icon{
+    position: absolute;
+    left: 15px;
+    top: 20px;
+    height: 15px;
+    color: #c6c5c5c5;
+    cursor: pointer;
+}
