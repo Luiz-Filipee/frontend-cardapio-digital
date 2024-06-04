@@ -38,6 +38,10 @@ export function CreateModal({ closeModal }: ModalProps){
         mutate(foodData);
     }
 
+    const submitClose = () => {
+        closeModal();
+    }
+
     useEffect(() => {
         if(!isSuccess) return
         closeModal()
@@ -52,9 +56,14 @@ export function CreateModal({ closeModal }: ModalProps){
                     <Input label="price" value={price} updateValue={setPrice}/>
                     <Input label="image" value={image} updateValue={setImage}/>
                 </form>
-                <button onClick={submit} className="btn-secondary">
-                    {isPending ? 'postando...' : 'postar'}
-                </button>
+                <div className="modal-button">
+                    <button onClick={submit} className="btn-secondary">
+                        {isPending ? 'postando...' : 'postar'}
+                    </button>
+                    <button onClick={submitClose} className="btn-close">
+                        Fechar
+                    </button>
+                </div>
             </div>
         </div>
     )
