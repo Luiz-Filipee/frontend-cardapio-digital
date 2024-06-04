@@ -3,6 +3,7 @@ import { Card } from './components/card/card';
 import './App.css'
 import { CreateModal } from './components/create-modal/create-modal';
 import { useFoodData } from './hooks/useFoodData';
+import { CreateModalSearch } from './components/search/search';
 
 function App() {
   const { data } = useFoodData();
@@ -15,6 +16,7 @@ function App() {
   return (
       <div className="container">
         <h1>Cardapio</h1>
+        {CreateModalSearch()}
         <div className="card-grid">
           {data?.map(foodData =>
             <Card
